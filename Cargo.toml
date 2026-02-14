@@ -1,0 +1,19 @@
+[package]
+name = "hyper_pipe_pro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+blake3 = "1"
+zstd = "0.13"
+anyhow = "1"
+path-clean = "1"
+ed25519-dalek = { version = "2.2", features = ["rand_core"] }
+futures = "0.3"
+hex = "0.4"
+# บังคับใช้ rand เวอร์ชั่น 0.8 เพื่อให้ตรงกับที่ ed25519-dalek ต้องการ
+rand = "0.8"
